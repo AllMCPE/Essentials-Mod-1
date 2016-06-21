@@ -45,17 +45,20 @@ function mainMenu(){
             menuScroll.addView(menuLayout);
             menuLayout1.addView(menuScroll);
 
-            var button = new android.widget.Button(ctx);
-            button.setText("Button");
-            button.setOnClickListener(new android.view.View.OnClickListener({
-                onClick: function(viewarg){
-                    //Your Code
-                }
-            }));
-            menuLayout.addView(button);
-
-            //Add more buttons in this section
-
+            var name = new android.widget.Button(ctx);
+            name.setTextSize("25")
+            name.setText("Essentials Mod v0.0.1");
+            name.setTextColor(android.graphics.Color.RED);
+            name.setGravity(android.view.Gravity.CENTER);
+            menuLayout.addView(name);
+            
+            var sec1 = new android.widget.TextView(ctx);
+            sec1.setTextSize("15");
+            sec1.setText("Enchant Weapons");
+            sec1.setTextColor(android.graphics.Color.CYAN);
+            sec1.setGravity(android.view.Gravity.CENTER);
+            menuLayout.addView(sec1);
+            
             menu = new android.widget.PopupWindow(menuLayout1, ctx.getWindowManager().getDefaultDisplay().getWidth()/2, ctx.getWindowManager().getDefaultDisplay().getHeight());
             menu.setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(android.graphics.Color.BLACK));
             menu.showAtLocation(ctx.getWindow().getDecorView(), android.view.Gravity.RIGHT | android.view.Gravity.TOP, 0, 0);
