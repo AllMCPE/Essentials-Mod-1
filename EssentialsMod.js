@@ -54,7 +54,7 @@ function mainMenu(){
             
             var sec1 = new android.widget.TextView(ctx);
             sec1.setTextSize("15");
-            sec1.setText("Enchant Weapons");
+            sec1.setText("Particles");
             sec1.setTextColor(android.graphics.Color.CYAN);
             sec1.setGravity(android.view.Gravity.CENTER);
             menuLayout.addView(sec1);
